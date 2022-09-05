@@ -8,6 +8,9 @@ jobs:
     permissions:
       contents: read
       packages: write
+    defaults:
+      run:
+        working-directory: ./application
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
@@ -17,6 +20,6 @@ jobs:
           distribution: 'corretto'
           cache: maven
       - name: Build and test
-        run: mvn --batch-mode verfy
+        run: mvn --batch-mode verify
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
