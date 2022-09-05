@@ -10,6 +10,6 @@ class NumberGeneratorTest {
     void generateRandomNumberLessThanInputTest() {
         int testFloorNumber = 10;
         int resultNumber = ng.generateRandomNumber(testFloorNumber);
-        assertTrue(resultNumber < 10);
+        assertTrue(resultNumber > 10);
     }
 }
