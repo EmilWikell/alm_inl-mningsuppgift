@@ -11,5 +11,6 @@ class NumberGeneratorTest {
         int testFloorNumber = 10;
         int resultNumber = ng.generateRandomNumber(testFloorNumber);
         assertTrue(resultNumber > 10);
+        //test comment
     }
 }
