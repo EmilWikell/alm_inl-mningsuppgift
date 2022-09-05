@@ -16,7 +16,7 @@ jobs:
           java-version: '17'
           distribution: 'corretto'
           cache: maven
-      - name: Upload Maven SNAPSHOT
-        run: mvn --batch-mode --update-snapshots deploy
+      - name: Build and test
+        run: mvn --batch-mode verfy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
