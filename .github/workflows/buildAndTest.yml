@@ -1,6 +1,8 @@
-name: Java CI
+name: Build and Test
 
-on: [push]
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   build:
@@ -20,6 +22,6 @@ jobs:
           distribution: 'corretto'
           cache: maven
       - name: Build and test
-        run: mvn --batch-mode verify
+        run: mvn --batch-mode test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
