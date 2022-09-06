@@ -1,4 +1,4 @@
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,6 +10,7 @@ class NumberGeneratorTest {
     void generateRandomNumberLessThanInputTest() {
         int testFloorNumber = 10;
         int resultNumber = ng.generateRandomNumber(testFloorNumber);
-        assertTrue(resultNumber > 10);
+        assertTrue(resultNumber < 10);
+        //test comment
     }
 }
