@@ -27,9 +27,4 @@ class NumberGeneratorTest {
         int resultNumber = ng.generateRandomNumber(testNumber);
         assertTrue(resultNumber <= 0);
     }
-
-    @Test
-    void failTest(){
-        fail("failed");
-    }
 }
